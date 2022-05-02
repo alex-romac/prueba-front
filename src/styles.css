@@ -1,0 +1,114 @@
+.contenedor {
+    font-family: system-ui;
+    padding: 2rem 14rem;
+}
+
+.columna {
+    flex: 0 0 auto;
+    width: 50%;
+}
+
+.fila {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 2em;
+}
+
+.columna.alinea {
+    margin-left: auto;
+}
+
+.campo {
+    box-sizing: border-box;
+    padding: 10px 3px 9px 32px;
+    width: 100%;
+  }
+
+.icono-campo {
+    width: 200px;
+    position: relative;
+}
+
+.icono-campo.boton {
+    width: 120px;
+}
+.estilo-icono {
+    position: absolute;
+	width: 21px;
+	height: 21px;
+	left: 6px;
+    top: 50%;
+	transform: translateY(-50%);
+}
+
+.campo.boton{
+    color: #ffffff;
+    background-color: #623DE8;
+    border-radius: 4px;
+    border: 2px solid #623DE8;
+}
+
+table{
+	width:100%; 
+    border-collapse:collapse;
+    border:2px solid #0000004f;
+    background: white;
+}
+
+th{
+	border:2px solid #CCC;
+}
+
+td{
+	border:2px solid #CCC;
+}
+
+form {
+    padding: 1em;
+    border: 2px solid #CCC;
+    background: white;
+  }
+
+.columna-div1 {
+    flex: 0 0 auto;
+    width: 70%;
+}
+
+.columna-div2 {
+    flex: 0 0 auto;
+    width: 1%;
+}
+
+.campo-form {
+    box-sizing: border-box;
+    padding: 11px 0px 9px 0px;
+    width: 250px
+  }
+
+.campo-slid {
+    box-sizing: border-box;
+    accent-color: #623DE8;
+}
+
+.columna.alinear-der {
+    margin-right: auto;
+}
+
+::placeholder { 
+    color: #CCC; 
+}
+
+
+.campo.boton:disabled {
+    border: 2px solid rgb(203, 195, 233);
+    background-color: rgb(203, 195, 233);
+    color: #ffffff;
+}
+
+.campo.boton:hover {
+    color: #ffffff;
+    background-color: rgba(120, 7, 250, 0.596);
+    border: 2px solid rgba(120, 7, 250, 0.596);
+  }
+
+

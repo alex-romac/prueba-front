@@ -1,0 +1,50 @@
+<div>
+        <p>{{msjExito}}</p>
+        <form  [formGroup]="form" class="input-form" >
+            <p align="center">Nuevo Pokemon</p>
+            <div class= "fila">
+                <div class="columna">
+                    <label>Nombre: </label>
+                    <input type="text" class="campo-form" formControlName="nombre">
+                    
+                </div>
+
+
+                <div class="columna alinea">
+                    <label>Ataque: </label>
+                    <label>0</label>
+                    <input type="range" min="0" max="100" step="1" value="0" class="campo-slid columna-div1" formControlName="ataque"/>
+                    <label>100</label>
+                </div> 
+            </div>
+           
+            <div class= "fila">
+                <div class="columna">
+                    <label>Imagen: </label>
+                    <input type="text" class="campo-form" placeholder="URL" formControlName="imagen">
+                </div>
+
+                <div class="columna alinea">
+                    <label>Defensa: </label>
+                    <label>0</label>
+                    <input type="range" min="0" max="100" step="1" value="0" class="campo-slid columna-div1" formControlName="defensa"/>
+                    <label>100</label>
+                </div> 
+            </div>
+
+            <div class="fila">
+                <div class="icono-campo boton columna alinea">
+                        <button [disabled]="!valido" type="button" class="campo boton" (click)="crearPokemon()">Guardar</button>
+                        <object data="assets/save_icon.svg" class="estilo-icono"></object>
+                </div>
+                <div class="columna-div2"></div>
+                <div class="icono-campo boton columna alinear-der">
+                        <button type="button" class="campo boton">Cancelar</button>
+                        <object data="assets/cancel_icon.svg" class="estilo-icono"></object>
+                </div>
+            </div>
+        </form>
+
+        
+
+</div>

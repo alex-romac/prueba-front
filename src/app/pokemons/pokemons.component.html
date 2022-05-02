@@ -1,0 +1,69 @@
+<div class="contenedor">
+    <p>{{titulo}}</p>
+        <div class="fila">
+                
+                <div class="icono-campo columna">
+                        <input type="search" class="campo" placeholder="Buscar" [(ngModel)]='criterio'>
+                        <object data="assets/search_icon.svg" class="estilo-icono"></object>
+                </div>
+
+                <div class="icono-campo boton columna alinea">
+                        <button type="button" class="campo boton" (click)='nuevoPokemon()'>Nuevo</button>
+                        <object data="assets/plus_icon.svg" class="estilo-icono"></object>
+                </div>
+        </div>
+        
+        <br/>
+       
+        <div>
+            <p>{{msjExito}}</p>
+            <table class="table" *ngIf='pokemons && pokemons.length'>
+                <thead>
+                    <tr>
+                        <th>Nombre </th>
+                        <th>Imagen</th>
+                        <th>Ataque</th>
+                        <th>Defensa</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let pk of listaPokemons'>
+                        <td>{{pk.name}}</td>
+                        <td align="center">
+                                <img
+                                [src]='pk.image'
+                                [title]='pk.name'
+                                [style.width.px]='25'
+                                [style.margin.px]='2'>
+                            
+                        </td>
+                        <td>{{pk.attack}}</td>
+                        <td>{{pk.defense}}</td>
+                        <td align='center'>
+                            <a [routerLink]="['/pokemons', '']"  (click)='editarPokemon(pk)'>
+                            <img
+                                src='assets/edit_icon.svg'
+                                title= 'Editar'
+                                [style.width.px]='25'
+                                [style.margin.px]='2'>
+                            </a>
+
+                            <a [routerLink]="['/pokemons', '']"  (click)='eliminarPokemon(pk.id)'>
+                                <img
+                                    src='assets/delete_icon.svg'
+                                    title= 'Eliminar'
+                                    [style.width.px]='25'
+                                    [style.margin.px]='2'>
+    
+                                </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <br/>
+        <bp-crear-pokemon [pokemonEditar] = 'pokemonSeleccionado' (botonClicked) = 'onBotonClicked($event)'></bp-crear-pokemon>
+</div>
